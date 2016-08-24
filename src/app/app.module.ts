@@ -3,6 +3,9 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import {MessageService} from './message.service';
+import {Http} from "@angular/http/esm";
+import {HTTP_PROVIDERS} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -13,7 +16,7 @@ import { AppComponent } from './app.component';
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HTTP_PROVIDERS, Http, MessageService],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
